@@ -1,0 +1,14 @@
+.classpath
+.project
+/.settings/
+/target/
+/.idea/
+/bin/
+
+*.iml
+
+.idea/*
+target/*
+
+/venv/
+*/__pycache__/
