@@ -1,0 +1,28 @@
+intellij 建立好 django 專案後
+settings.py -> INSTALLED_APPS -> 加上rest_framework
+第一層執行 python manage.py startapp demo
+settings.py -> INSTALLED_APPS -> 加上多加上 demo
+
+/demo/models.py
+	from django.db import models
+
+	# Create your models here.
+	class Demo(models.Model):
+		name = models.TextField()
+		age = models.TextField()
+
+		class Meta:
+			db_table = 'demo'
+			
+第一層執行 python manage.py makemigrations && python manage.py migrate
+
+
+撰寫 demo/models.py  demo/serializers.py  demo/views.py
+
+
+celery
+
+worker --pool=solo -l info --concurrency=1
+
+
+PYTHONUNBUFFERED=1;DJANGO_SETTING_MODULE=python_web.settings	
