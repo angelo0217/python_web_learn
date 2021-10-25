@@ -32,6 +32,10 @@ class DemoViewSet(viewsets.ModelViewSet):
     serializer_class = DemoSerializer
     http_method_names = ['get', 'post']
 
+    @action(detail=False, methods=['get'])
+    def hello(self, request):
+        return Response({'status': 'hello'})
+
     # http://127.0.0.1:8000/rest/demo/run_data/
     @action(detail=False, methods=['post'])
     def run_data(self, request):
