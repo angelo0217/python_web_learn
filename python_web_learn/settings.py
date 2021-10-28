@@ -30,8 +30,8 @@ ALLOWED_HOSTS = []
 APPEND_SLASH=False
 # Application definition
 
-CELERY_BROKER_URL ='amqp://127.0.0.1:5672'
-CELERY_BACKEND_URL = 'amqp://127.0.0.1:5672'
+CELERY_BROKER_URL ='amqp://test-server:5672'
+CELERY_BACKEND_URL = 'amqp://test-server:5672'
 CELERY_RESULT_BACKEND = 'rpc://'
 # CELERY_BROKER_URL = 'redis://127.0.0.1:6379/10'
 # CELERY_BACKEND_URL = 'redis://127.0.0.1:6379/10'

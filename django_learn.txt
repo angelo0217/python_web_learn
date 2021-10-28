@@ -25,4 +25,13 @@ celery
 worker --pool=solo -l info --concurrency=1
 
 
-PYTHONUNBUFFERED=1;DJANGO_SETTING_MODULE=python_web.settings	
+PYTHONUNBUFFERED=1;DJANGO_SETTING_MODULE=python_web.settings
+
+
+python manage.py runserver
+
+將deploy內的都放到上一層才可跑
+
+docker run --name python-web1 --add-host='test-server:10.0.2.15'  -p 8000:8000 -d python-web
+
+apk add --no-cache --virtual .persistent-deps curl

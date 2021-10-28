@@ -22,7 +22,7 @@ class AMQPProducer():
     @staticmethod
     def _get_connection():
         print('_get_connection ================')
-        parameters = pika.ConnectionParameters('localhost', 5672)
+        parameters = pika.ConnectionParameters('test-server', 5672)
         return pika.BlockingConnection(parameters)
 
     def send(self):
